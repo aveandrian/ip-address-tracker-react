@@ -21,4 +21,4 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![image](https://github.com/aveandrian/ip-address-tracker-react/assets/13519212/da3e31f3-ffaf-4f36-b8f9-3cfde9d55d8c)
