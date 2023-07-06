@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+  padding-top: 2vh;
+  height: 30vh;
+  width: 100vw;
+  background: url('/images/pattern-bg-desktop.png') no-repeat;
+  background-size: cover;
+}
+
+.title {
+  color: white;
+}
+
+.input-wrapper {
+  width: 45vw;
+  display: flex;
+  height: 3.125rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+.input {
+  flex: 1;
+  text-indent: 1.25rem;
+  border: none;
+  font-size: 1.125rem;
+}
+
+.input:hover, .submit-btn:hover {
+  cursor: pointer;
+}
+
+.input:focus {
+  outline: none;
+}
+.submit-btn {
+  width: 3.125rem;
+  background-color: black;
+  border: none;
+}
+
+.submit-btn:hover {
+  background-color: rgb(63, 63, 63);
+}
+
+main {
+  height: 70vh;
+  position: relative;
+}
+
+.results-container {
+  z-index: 1;
+  width: 80vw;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  border-radius: 0.625rem;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
+
+.divider {
+  width: 0.063rem;
+  height: 7vh;
+  margin-inline: 1.25rem;
+  background-color: hsl(0, 0%, 59%);
+  align-self: center;
+}
+
+.results-item {
+  padding: 2.5rem;
+  padding-inline: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: start;
+}
+.result-name {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: hsl(0, 0%, 59%);
+}
+
+.result-value {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.leaflet-container {
+  height: 100%;
+  width: 100vw;
+  z-index: 0;
+}
+
+footer {
+  position: absolute;
+  bottom: 1.2rem;
+}
+
+.attribution, .attribution a {
+  color: hsl(0, 0%, 17%);
+  font-weight: 500;
+  text-align: center;
+}
+
+@media screen and (max-width: 60rem){
+  header {
+    height: 40vh;
+    background: url('/images/pattern-bg-mobile.png') no-repeat;
+    background-size: cover;
+  }
+
+  main {
+    height: 60vh;
+  }
+
+  .title {
+    font-size: 5vw;
+  }
+
+  .input-wrapper {
+    width: 70vw;
+  }
+  .input{
+    width: 80%;
+  }
+  .submit-btn {
+    width: 20%;
+  }
+  .results-container {
+    padding: 1.25rem;
+    width: 70vw;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+  }
+
+  .results-item {
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    gap: 0.625rem;
+  }
+  .result-name, .attribution, .attribution a {
+    font-size: 2vw;
+  }
+  .result-value {
+    font-size: 3vw;
+  }
+
+  .divider {
+    display: none;
+  }
+}
